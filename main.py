@@ -20,4 +20,8 @@ app.include_router(ship_router)
 
 @app.get("/")
 async def root():
-    return {"message": "Sensor generator running!"} 
+    return {"message": "Sensor generator running!"}
+
+@app.get("/health")
+def health():
+    return {"status": "ok"} 
